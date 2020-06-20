@@ -1,0 +1,31 @@
+
+[1mFrom:[0m /mnt/c/Users/Eribe/dev/flatiron/labs/oo-student-scraper-onl01-seng-ft-052620/lib/scraper.rb @ line 40 Scraper.scrape_profile_page:
+
+    [1;34m32[0m: [32mdef[0m [1;36mself[0m.[1;34mscrape_profile_page[0m(profile_url)
+    [1;34m33[0m: 
+    [1;34m34[0m:   array_student_hash = []
+    [1;34m35[0m: 
+    [1;34m36[0m:   html = open(profile_url)
+    [1;34m37[0m:   doc = [1;34;4mNokogiri[0m::HTML(html)
+    [1;34m38[0m:   
+    [1;34m39[0m:   student_profile = doc.css([31m[1;31m'[0m[31m.main-wrapper[1;31m'[0m[31m[0m)
+ => [1;34m40[0m:   binding.pry
+    [1;34m41[0m:   hash_info = 
+    [1;34m42[0m:   {
+    [1;34m43[0m:     [33m:twitter[0m => [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m,
+    [1;34m44[0m:     [33m:linkedin[0m => [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m,
+    [1;34m45[0m:     [33m:github[0m => [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m,
+    [1;34m46[0m:     [33m:blog[0m => [31m[1;31m'[0m[31m[1;31m'[0m[31m[0m,
+    [1;34m47[0m:     [33m:profile_quote[0m => student_profile.css([31m[1;31m'[0m[31m.profile-quote[1;31m'[0m[31m[0m).text,
+    [1;34m48[0m:     [33m:bio[0m => student_profile.css([31m[1;31m'[0m[31mp[1;31m'[0m[31m[0m).text
+    [1;34m49[0m: 
+    [1;34m50[0m:   }
+    [1;34m51[0m: 
+    [1;34m52[0m:   array_students_hashs << hash_info
+    [1;34m53[0m:   
+    [1;34m54[0m: 
+    [1;34m55[0m:   array_student_hash
+    [1;34m56[0m: 
+    [1;34m57[0m:   
+    [1;34m58[0m: [32mend[0m
+
